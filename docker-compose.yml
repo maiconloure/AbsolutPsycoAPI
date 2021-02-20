@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  abst_psy_api:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    volumes:
+        - '.:/usr/app'
+    ports:
+        - '6666:6666'
+    command: yarn start
