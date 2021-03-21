@@ -8,4 +8,4 @@ RUN yarn install
 
 COPY . . 
 
-EXPOSE 6666
+EXPOSE 8080

@@ -8,5 +8,5 @@ services:
     volumes:
         - '.:/usr/app'
     ports:
-        - '6666:6666'
+        - '8080:8080'
     command: yarn start
