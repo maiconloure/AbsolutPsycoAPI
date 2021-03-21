@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir public --copy-files --no-copy-ignored",
-    "start": "node public/server.js",
+    "start": "node public/shared/infra/http/server.js",
     "start-dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/shared/infra/http/server.ts",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/shared/infra/http/server.ts",
     "test": "jest"
