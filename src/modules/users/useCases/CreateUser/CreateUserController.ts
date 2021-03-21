@@ -14,7 +14,7 @@ export default class CreateUserController {
                 name, email, password
             })
 
-            return res.status(201).send()
+            return res.sendStatus(201)
 
         } catch (error) {
             return res.status(400).json({

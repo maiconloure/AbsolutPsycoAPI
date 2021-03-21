@@ -3,3 +3,4 @@ public/
 .eslintcache
 .cache
 .env
+app.yaml
