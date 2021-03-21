@@ -15,7 +15,7 @@ class App {
       this.middlewares()
       this.appRoutes.routes(this.express)
       this.sockets() // inicia os serviços do websocket
-      this.listen() // Inicia os eventos do socket.io
+      this.listen() // Inicia e realiza a leitura dos eventos do socket
   }
 
   private middlewares(): void {
@@ -29,7 +29,7 @@ class App {
   }
 
   private listen(): void {
-    this.io.on('connection', (socket: Socket) => { // ouve o evento de conexão, para cada novo socket iniciado 
+    this.io.on('connection', (socket: Socket) => { // ouve o evento de conexão, um novo socket para cada nova conexão realizada
         let userId = ''
         let username = ''
 
@@ -39,7 +39,7 @@ class App {
         })
       
         socket.on('chat.message', (msg) => {
-          // quando é chamado o evento chat.message ele devolve a mensagem a todos os sockets ligados ao servidor do socket.io
+          // quando é chamado o evento chat.message ele devolve a mensagem a todos os sockets ligados ao servidor
             this.io.emit('chat.message', msg)
         })
 
