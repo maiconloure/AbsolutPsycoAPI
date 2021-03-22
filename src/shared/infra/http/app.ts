@@ -3,6 +3,7 @@ import { createServer, Server } from 'http'
 import cors from 'cors'
 import Routes from './routes/router'
 import { Server as socketIo, Socket } from "socket.io" 
+import env from '../../../config/index'
 
 class App {
   public express: express.Application
@@ -20,12 +21,18 @@ class App {
 
   private middlewares(): void {
       this.express.use(express.json())
-      this.express.use(cors())
+      // this.express.use(cors())
   }
 
   private sockets(): void {
     this.server = createServer(this.express)  // criando o server
-    this.io = new socketIo(this.server) // inicializando o socket.
+    this.io = new socketIo(this.server, {
+      cors: {
+        origin: env.CLIENT || "http://localhost:3000",
+        methods: ["GET", "POST"],
+        credentials: true
+      }
+    }) // inicializando o socket.
   }
 
   private listen(): void {

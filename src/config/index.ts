@@ -5,6 +5,7 @@ dotenv.config();
 export default {
     PORT: process.env.PORT,
     HOST: process.env.HOST,
+    CLIENT: process.env.CLIENT,
     MAIL_HOST: process.env.MAIL_HOST,
     MAIL_PORT: process.env.MAIL_PORT,
     MAIL_AUTH_USER: process.env.MAIL_AUTH_USER,
