@@ -6,7 +6,7 @@ services:
         context: .
         dockerfile: Dockerfile
     volumes:
-        - '.:/usr/app'
+        - '.:/app'
     ports:
         - '8080:8080'
     command: yarn start
