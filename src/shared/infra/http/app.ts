@@ -28,7 +28,7 @@ class App {
     this.server = createServer(this.express)  // criando o server
     this.io = new socketIo(this.server, {
       cors: {
-        origin: env.CLIENT || "http://localhost:3000",
+        origin: "https://absolut-psy.vercel.app/",
         methods: ["GET", "POST"],
         credentials: true
       }
