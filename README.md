@@ -2,5 +2,3 @@
 
 DDD, SOLID Pratice Project
 ###
-
-```Dead already?```
