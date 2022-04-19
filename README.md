@@ -1,4 +1,4 @@
 # ABSOLUT-PSYCO
 
-**DDD, SOLID Pratice Project**
+**DDD, SOLID  Project**
 ###
